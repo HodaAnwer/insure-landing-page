@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
+  </script>
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Insure landing page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    @font-face {
+      font-family: karla;
+      src: url(Karla-VariableFont_wght.ttf);
+    }
+    
+    @font-face {
+      font-family: dmserif;
+      src: url(DMSerifDisplay-Regular.ttf);
+    }
+    
+    html,
+    body {
+      height: 100%;
+    }
+    
+    .container {
+      max-width: 100%;
+      min-height: 100%;
+    }
+    
+    #people-firstDIV,
+    #affordable-pricesDiv,
+    #snappy-processDiv {
+      width: 30%;
+    }
+    
+    #div,
+    #headDiv,
+    #linksDiv {
+      display: flex;
+    }
+    
+    .insure {
+      width: 45%;
+      margin-top: 12px;
+      margin-bottom: 12px;
+      margin-left: 7%;
+      padding: 4px;
+    }
+    
+    .head {
+      margin-right: 30px;
+      margin-top: 25px;
+      font-family: karla;
+      font-weight: 700;
+      font-size: 20px;
+      letter-spacing: 2px;
+      color: hsl(273, 4%, 51%);
+      text-decoration: none;
+    }
+    
+    #but-ViewPlans {
+      width: 12%;
+      height: 45px;
+      margin-right: 5%;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      font-family: karla;
+      font-weight: 700;
+      font-size: 20px;
+      letter-spacing: 2px;
+      color: hsl(270, 9%, 17%);
+      border-color: hsl(270, 9%, 17%);
+      background-color: white;
+    }
+    
+    #humanizingDiv {
+      width: 100%;
+      background-color: hsl(256, 26%, 20%);
+      color: white;
+      position: relative;
+      padding-left: 7%;
+      padding-top: 150px;
+      padding-bottom: 125px;
+    }
+    
+    #humanizing,
+    #humanizingP {
+      width: 46%;
+    }
+    
+    #humanizing {
+      font-family: dmserif;
+      font-weight: 400;
+      font-size: 5.5vw;
+      margin-bottom: 20px;
+    }
+    
+    #humanizingP {
+      font-family: karla;
+      font-weight: 400;
+      font-size: 1.25vw;
+      margin-bottom: 30px;
+    }
+    
+    #hr-humanizing {
+      width: 10%;
+      margin-bottom: 50px;
+    }
+    
+    #but-humanizing {
+      width: 12%;
+      height: 45px;
+      font-family: karla;
+      font-weight: 700;
+      font-size: 20px;
+      letter-spacing: 2px;
+      background-color: hsl(256, 26%, 20%);
+      color: white;
+      border-color: white;
+    }
+    
+    #img-lines-right {
+      margin-top: -38.5%;
+      margin-left: 50.5%;
+      position: absolute;
+      z-index: 2;
+    }
+    
+    #img-lines-left {
+      margin-top: -15%;
+      position: absolute;
+      z-index: 2;
+    }
+    
+    #img-family {
+      margin-top: -38%;
+      margin-left: 55%;
+      position: absolute;
+    }
+    
+    #weAreDifferentDiv {
+      margin-left: 7%;
+      /* margin-top: 50px; */
+      /* position: relative; */
+    }
+    
+    #hr-weAreDifferent {
+      width: 10%;
+      margin-top: 50px;
+    }
+    
+    #how-we-workDiv {
+      width: 80%;
+      background-color: hsl(270, 9%, 17%);
+      background-image: url("images/bg-pattern-how-we-work-desktop.svg");
+      background-repeat: no-repeat;
+      background-position: right;
+      color: white;
+      margin-left: 10%;
+    }
+    
+    #how-we-work {
+      width: 40%;
+    }
+    
+    #how-we-workBut {
+      margin-left: 80%;
+      margin-bottom: 10%;
+    }
+    
+    #insureDiv {
+      width: 100%;
+      padding-left: 10%;
+      padding-right: 10%;
+      /* vertical-align: middle; */
+      background-color: hsl(0, 0%, 98%);
+      background-image: url("images/bg-pattern-footer-desktop.svg");
+      background-repeat: no-repeat;
+      background-position: left;
+    }
+    
+    #socialMediaDiv {
+      margin-left: 80%;
+    }
+    
+    .img-socialMedia {
+      margin-right: 3%;
+    }
+    
+    .linksDiv {
+      width: 25%;
+    }
+    
+    #weAreDifferentDiv {
+      margin-top: 30%;
+    }
+    
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+    
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div id="headDiv">
+        <h1 class="insure">INSURE</h1>
+        <a href="http://" class="head"> How we work</a>
+        <a href="http://" class="head">Blog</a>
+        <a href="http://" class="head">Account</a>
+        <button id="but-ViewPlans">View plans</button>
+      </div>
+      <div id="twoDiv">
+        <div id="humanizingDiv">
+          <hr id="hr-humanizing">
+          <h2 id="humanizing">Humanizing your insurance.</h2>
+          <p id="humanizingP"> Get your life insurance coverage easier and faster. We blend our expertise and technology to help you find the plan that’s right for you. Ensure you and your loved ones are protected.</p>
+          <button id="but-humanizing">View plans</button>
+          <img id="img-lines-right" src="images/bg-pattern-intro-right-desktop.svg" alt="lines">
+        </div>
+        <div>
+          <img id="img-family" src="images/image-intro-desktop.jpg" alt="family-img">
+          <img id="img-lines-left" src="images/bg-pattern-intro-left-desktop.svg" alt="lines">
+        </div>
+        <div id="weAreDifferentDiv">
+          <hr id="hr-weAreDifferent">
+          <h1>We’re different</h1>
+          <div id="div">
+            <div id="snappy-processDiv">
+              <img src="images/icon-snappy-process.svg" alt="icon-snappy-process">
+              <h3>Snappy Process</h3>
+              <p>
+                Our application process can be completed in minutes, not hours. Don’t get stuck filling in tedious forms.</p>
+            </div>
+            <div id="affordable-pricesDiv">
+              <img src="images/icon-affordable-prices.svg" alt="icon-affordable-prices">
+              <h3>Affordable Prices</h3>
+              <p>We don’t want you worrying about high monthly costs. Our prices may be low, but we still offer the best coverage possible.</p>
+            </div>
+            <div id="people-firstDIV">
+              <img src="images/icon-people-first.svg" alt="icon-people-first">
+              <h3>People First</h3>
+              <p> Our plans aren’t full of conditions and clauses to prevent payouts. We make sure you’re covered when you need it.</p>
+            </div>
+          </div>
+          <div id="how-we-workDiv">
+            <h1 id="how-we-work">Find out more about how we work</h1>
+            <button id="how-we-workBut">How we work</button>
+          </div>
+        </div>
+      </div>
+      <div id="insureDiv">
+        <div>
+          <h1 class="insure">INSURE</h1>
+          <div id="socialMediaDiv">
+            <img class="img-socialMedia" src="images/icon-facebook.svg" alt="icon-facebook">
+            <img class="img-socialMedia" src="images/icon-twitter.svg" alt="icon-twitter">
+            <img class="img-socialMedia" src="images/icon-pinterest.svg" alt="icon-pinterest">
+            <img class="img-socialMedia" src="images/icon-instagram.svg" alt="icon-instagram">
+          </div>
+          <hr>
+        </div>
+        <div id="linksDiv">
+          <div class="linksDiv">
+            <h3>Our company</h3>
+            <br>
+            <a href="http://">How we work</a><br>
+            <a href="http://">Why Insure?</a><br>
+            <a href="http://">View plans</a><br>
+            <a href="http://">Reviews</a>
+          </div>
+          <div class="linksDiv">
+            <h3>Help me</h3>
+            <br>
+            <a href="http://">FAQ</a><br>
+            <a href="http://">Terms of use</a><br>
+            <a href="http://">Privacy policy</a><br>
+            <a href="http://">Cookies</a>
+          </div>
+          <div class="linksDiv">
+            <h3>Contact</h3><br>
+            <a href="http://">Sales</a><br>
+            <a href="http://">Support</a><br>
+            <a href="http://">Live chat</a>
+          </div>
+          <div class="linksDiv">
+            <h3>Others</h3><br>
+            <a href="http://">Careers</a><br>
+            <a href="http://">Press</a><br>
+            <a href="http://">Licenses</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Hoda Anwer</a>.
+  </div>
+</body>
+
+</html>
