@@ -314,16 +314,21 @@
     }
     
     @media only screen and (max-width:767px) {
-      .container {
-        min-width: 125%;
-        padding-left: 0px;
-        padding-right: 0px;
+      /* .container { */
+      /* width: 375px; */
+      /* padding-left: 0px;
+        padding-right: 0px; */
+      /* } */
+      body {
+        width: 375px;
       }
       #headDiv {
+        width: 375px;
         /* height: 20%; */
         padding-top: 6%;
-        padding-left: 10%;
         padding-bottom: 4%;
+        padding-left: 10%;
+        padding-right: 0%;
         display: flex;
         /* padding-right: 6%; */
       }
@@ -340,50 +345,58 @@
       #img-hamburger {
         /* display: block; */
         /* margin-right: 6%; */
-        margin-left: 32%;
+        margin-left: 40%;
       }
       .insure {
         margin-right: 20px;
       }
-      #img-family-mobile {
+      #img-family-mobile-div {
         /* display: block; */
-        margin-right: 0px;
+        /* margin-right: 0px; */
+        padding-right: 0px;
+        padding-left: 0px;
+        width: 375px;
       }
       #humanizingDiv {
-        width: 100%;
+        width: 375px;
         background-color: hsl(256, 26%, 20%);
-        position: relative;
+        /* position: relative; */
+        text-align: center;
       }
       #humanizing {
-        width: 70%;
+        width: 100%;
         color: white;
         font-family: dmserif;
         font-weight: 550;
-        font-size: 11vw;
+        font-size: 13.3vw;
         margin-bottom: 20px;
-        padding-left: 10%;
-        padding-top: 70px;
-        text-align: center;
-        position: relative;
-        z-index: 2;
+        margin-top: -90px;
+        /* padding-left: 10%; */
+        /* padding-top: 70px; */
+        /* text-align: center; */
+        /* position: static;
+        z-index: 2; */
       }
       #humanizingP {
-        width: 70%;
+        width: 100%;
         font-family: karla;
         font-weight: 350;
-        font-size: 3.9vw;
+        font-size: 4.5vw;
         margin-bottom: 30px;
         color: hsl(216, 30%, 68%);
         text-align: center;
-        padding-left: 10%;
+        padding-left: 6%;
+        padding-right: 6%;
       }
       #img-lines-left-mobile {
-        position: absolute;
-        z-index: 0;
+        /* margin-left: 0px; */
+        padding-right: 55%;
+        /* position: relative;
+        z-index: 0; */
       }
       #but-humanizing {
-        width: 30%;
-        height: 45px;
+        width: 33%;
+        height: 35px;
         font-family: karla;
         font-weight: 700;
         font-size: 3.5vw;
@@ -392,10 +405,14 @@
         color: hsl(216, 30%, 68%);
         border-color: hsl(216, 30%, 68%);
         box-shadow: none;
-        margin-left: 25%;
+        margin-left: 0%;
         margin-bottom: 90px;
         /* position: relative;
         z-index: 1; */
+      }
+      #but-humanizing:hover {
+        background-color: white;
+        color: hsl(256, 26%, 20%);
       }
       #img-lines-right-mobile {
         margin-top: -295px;
@@ -403,8 +420,9 @@
         position: absolute;
       }
       #weAreDifferentDiv {
-        margin-left: 6%;
-        margin-right: 4%;
+        width: 375px;
+        /* margin-left: 5%; */
+        /* margin-right: 5%; */
         margin-top: 30%;
         text-align: center;
       }
@@ -418,12 +436,12 @@
       #h1-weAreDifferent {
         font-family: dmserif;
         font-weight: 700;
-        font-size: 12vw;
+        font-size: 13vw;
         color: hsl(270, 9%, 17%);
         margin-bottom: 80px;
         /* margin-top: 50px; */
-        margin-left: 0%;
-        margin-right: 20%;
+        padding-left: 3%;
+        padding-right: 3%;
         padding-top: 30px;
         /* text-align: center; */
       }
@@ -438,34 +456,39 @@
       .p-weAreDifferent {
         font-family: karla;
         font-weight: 400;
-        font-size: 3.9vw;
+        font-size: 4.5vw;
         color: hsl(273, 4%, 51%);
       }
       #people-firstDIV,
       #affordable-pricesDiv,
       #snappy-processDiv {
-        width: 72%;
+        /* width: 72%; */
         /* margin-right: 2%; */
         margin-bottom: 12%;
-        padding-left: 10px;
+        padding-left: 2%;
+        padding-right: 2%;
+        text-align: center;
       }
       #how-we-workDiv {
-        width: 75%;
-        height: 340px;
+        width: 90%;
+        /* height: 340px; */
         background-color: hsl(256, 26%, 20%);
         color: white;
+        margin-left: 5%;
+        margin-right: 5%;
         /* padding-right: 0%; */
         /* padding-top: 50px; */
-        padding-left: 10%;
+        /* padding-left: 1%; */
         /* text-align: center; */
       }
       #h1-how-we-work {
         width: 80%;
         font-family: dmserif;
         font-weight: 400;
-        font-size: 10vw;
-        /* margin-left: 0px; */
+        font-size: 12vw;
+        margin-left: 33px;
         padding-top: 50px;
+        /* margin-block-end: 0px; */
         /* padding-bottom: 50px; */
         /* padding-left: 7%; */
         /* padding-right: 38%; */
@@ -476,9 +499,9 @@
         width: 60%;
         height: 42px;
         margin-top: 50px;
-        margin-bottom: 30px;
-        margin-left: 0%;
-        margin-right: 13%;
+        margin-bottom: 60px;
+        margin-left: 20%;
+        margin-right: 20%;
         font-family: karla;
         font-weight: 400;
         letter-spacing: 1px;
@@ -486,12 +509,17 @@
         color: white;
         border-color: white;
         box-shadow: none;
+        position: relative;
         z-index: 2;
+      }
+      #but-how-we-work:hover {
+        background-color: white;
+        color: hsl(256, 26%, 20%);
       }
       #img-how-we-work-mobile {
         /* margin-top: 0px; */
         /* margin-right: -50%; */
-        margin-left: -10%;
+        margin-left: -2%;
         position: absolute;
         z-index: 0;
       }
@@ -500,14 +528,14 @@
         padding-right: 0px;
       }
       #insureDiv {
-        width: 100%;
+        width: 375px;
         background-color: hsl(0, 0%, 98%);
         margin-top: 10%;
       }
       #insure2Div {
         /* height: 27%; */
         /* display: flex; */
-        padding-top: 30px;
+        padding-top: 90px;
         /* padding-left: 1%; */
         /* padding-right: 4%; */
         text-align: center;
@@ -515,53 +543,65 @@
       #hr-insure {
         width: 90%;
         margin-top: 10px;
-        margin-left: 6%;
+        margin-left: 5%;
       }
       #img-insure2-mobile {
         position: absolute;
         margin-bottom: 100%;
         margin-top: 0px;
-        margin-left: 0px;
-        z-index: 0;
+        margin-left: -10px;
+        /* z-index: 0; */
       }
       #socialMediaDiv {
-        width: 40%;
-        margin-left: 30%;
+        width: 50%;
+        margin-left: 25%;
         margin-top: 30px;
+        margin-bottom: 40px;
       }
       #insure2 {
         position: relative;
-        width: 50%;
-        z-index: 1;
+        /* width: 50%; */
+        /* z-index: 1; */
       }
       .img-socialMedia {
         fill: #837D88;
         margin-right: 6%;
+        position: relative;
       }
       .img-socialMedia:hover {
         fill: hsl(256, 26%, 20%);
       }
+      .aSocialMedia:hover {
+        color: hsl(256, 26%, 20%);
+        text-decoration: none;
+      }
       #linksDiv {
-        margin-left: 6%;
+        width: 375px;
+        /* margin-left: 6%; */
         margin-bottom: 20px;
       }
       .linksDiv {
-        width: 100%;
+        width: 375px;
         padding-top: 4%;
         padding-bottom: 5%;
+        padding-right: 7%;
         text-align: center;
       }
       .hLinks {
         font-family: karla;
-        font-weight: 400;
-        font-size: 5vw;
+        font-weight: 700;
+        font-size: 4vw;
         color: hsl(273, 4%, 51%)
       }
       a {
         text-decoration: none;
         font-family: karla;
         font-weight: 700;
-        font-size: 5vw;
+        font-size: 4vw;
+        color: hsl(256, 26%, 20%);
+      }
+      a:hover {
+        text-decoration: underline;
         color: hsl(256, 26%, 20%);
       }
     }
@@ -588,7 +628,7 @@
         <button id="but-ViewPlans">VIEW PLANS</button>
         <img id="img-hamburger" src="images/icon-hamburger.svg" alt="icon-hamburger">
       </div>
-      <div>
+      <div id="img-family-mobile-div">
         <img id="img-family-mobile" src="images/image-intro-mobile.jpg" alt="family-img">
       </div>
       <div id="twoDiv">
